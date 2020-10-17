@@ -13,6 +13,8 @@ browserify does not work. It returns "Support for the experimental syntax 'jsx' 
 
 Had to add the file `babel.config.json`, which seems to have replaced `.babelrc`. The CLI options for a babelify transform don't seem to work. Not sure why.
 
+Also got rid of the css import statements, b/c I don't normally use them. Still need to find an optimal way of doing css actually.
+
 ----------------------------------
 
 # redux demo
