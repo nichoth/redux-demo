@@ -7,14 +7,19 @@
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.5.0",
     "@testing-library/user-event": "^7.2.1",
+    "install": "^0.13.0",
+    "npm": "^6.14.8",
     "react": "^16.14.0",
     "react-dom": "^16.14.0",
     "react-redux": "^7.2.1",
-    "react-scripts": "3.4.3"
+    "react-scripts": "3.4.3",
+    "redux": "^4.0.5"
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "browserify -p esmify -t [ babelify --presets [ @babel/preset-react ] ] src/index.js -o public/bundle.js",
+    "_build": "browserify -p esmify -t [ babelify --plugins [ @babel/plugin-transform-react-jsx ] ] src/index.js -o public/bundle.js",
+    "__build": "browserify -p [ esmify ] -t [ reactify --es6 ] src/index.js > public/bundle.js",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
@@ -32,6 +37,17 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@babel/core": "^7.12.3",
+    "@babel/plugin-transform-react-jsx": "^7.12.1",
+    "@babel/preset-react": "^7.12.1",
+    "babel-preset-react": "^6.24.1",
+    "babelify": "^10.0.0",
+    "browserify": "^17.0.0",
+    "budo": "^11.6.4",
+    "esmify": "^2.1.1",
+    "parcel-bundler": "^1.12.4",
+    "reactify": "^1.1.1"
   }
 }
-
