@@ -17,7 +17,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "browserify -p esmify -t [ babelify --presets [ @babel/preset-react ] ] src/index.js -o public/bundle.js",
+    "build": "browserify -p esmify -t babelify src/index.js -o public/bundle.js",
     "_build": "browserify -p esmify -t [ babelify --plugins [ @babel/plugin-transform-react-jsx ] ] src/index.js -o public/bundle.js",
     "__build": "browserify -p [ esmify ] -t [ reactify --es6 ] src/index.js > public/bundle.js",
     "test": "react-scripts test",
