@@ -1,5 +1,7 @@
 Doing what it says here: https://redux.js.org/introduction/getting-started
 
+But we've departed from the template b/c we're using browserify to build things.
+
 * `npm install @reduxjs/toolkit`
 * `npx create-react-app my-app --template redux`
 * `npm install redux`
@@ -16,6 +18,19 @@ Had to add the file `babel.config.json`, which seems to have replaced `.babelrc`
 Also got rid of the css import statements, b/c I don't normally use them. Still need to find an optimal way of doing css actually.
 
 ----------------------------------
+
+## css
+
+Reading about bulma
+
+In your sass file:
+```css
+@import "bulma/sass/utilities/_all.sass"
+@import "bulma/sass/grid/columns.sass"
+@import "bulma/sass/elements/button.sass"
+```
+
+------------------------------------
 
 # redux demo
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), using the [Redux](https://redux.js.org/) and [Redux Toolkit](https://redux-toolkit.js.org/) template.
