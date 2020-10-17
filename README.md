@@ -3,13 +3,17 @@ Doing what it says here: https://redux.js.org/introduction/getting-started
 * `npm install @reduxjs/toolkit`
 * `npx create-react-app my-app --template redux`
 * `npm install redux`
-* add 1bundle.js` to `index.html`
+* add `bundle.js` to `index.html`
 
 --------------------------------
 
 browserify does not work. It returns "Support for the experimental syntax 'jsx' isn't currently enabled" no matter what I do. Tried `reactify` and `babelify`
 
 -----------------------------------
+
+Had to add the file `babel.config.json`, which seems to have replaced `.babelrc`. The CLI options for a babelify transform don't seem to work. Not sure why.
+
+----------------------------------
 
 # redux demo
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), using the [Redux](https://redux.js.org/) and [Redux Toolkit](https://redux-toolkit.js.org/) template.
